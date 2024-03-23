@@ -5,6 +5,7 @@ const dropdownList = document.querySelector(".dropdown__list");
 const listItems = document.querySelectorAll(".dropdown__list-item");
 const inputHidden = document.querySelector(".dropdown__input-hidden");
 const phone = document.querySelector("#telField");
+const inputItems = document.querySelectorAll("input");
 
 btn.addEventListener("click", () => {
   dropdownList.classList.toggle("dropdown__list-visible");
@@ -32,6 +33,10 @@ f.addEventListener("submit", function (e) {
     .then((json) => {
       if (json.id === 101) {
         submitBtn.innerText = "Отправлено";
+        document.myForm.reset();
+        inputItems.forEach((el) => {
+          el.innerText = "";
+        });
       }
       console.log(json);
     })
