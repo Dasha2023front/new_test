@@ -4,6 +4,7 @@ const btn = document.querySelector(".dropdown__button");
 const dropdownList = document.querySelector(".dropdown__list");
 const listItems = document.querySelectorAll(".dropdown__list-item");
 const inputHidden = document.querySelector(".dropdown__input-hidden");
+const phone = document.querySelector("#telField");
 
 btn.addEventListener("click", () => {
   dropdownList.classList.toggle("dropdown__list-visible");
@@ -59,4 +60,19 @@ document.addEventListener("click", (e) => {
     dropdownList.classList.remove("dropdown__list-visible");
     btn.classList.remove("dropdown__button-active");
   }
+});
+
+const width = window.matchMedia("(max-width: 560px)");
+
+const setPattern = () => {
+  if (window.innerWidth < 560) {
+    phone.removeAttribute("pattern");
+  } else {
+    phone.setAttribute("pattern", "[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}");
+  }
+};
+setPattern();
+
+width.addEventListener("change", (e) => {
+  setPattern(e.matches);
 });
