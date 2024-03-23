@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+<script defer src="main.bundle.js"></script></head>
+
+<body>
+  <div id="root" class="f-page">
+    <header class="header">
+      <nav class="nav inner">
+        <div class="header_left">
+          <nav id="menu" class="f-page__nav">
+            <ul class="f-menu" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="f-link__menu" itemprop="itemListElement1 f-link_menu_active" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/">календарь мероприятий</a>
+              </li>
+              <li class="f-link__menu" itemprop="itemListElement2" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/">футбол</a>
+              </li>
+              <li class="f-link__menu" itemprop="itemListElement3" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/">твд</a>
+              </li>
+              <li class="f-link__menu" itemprop="itemListElement4" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/about">стретчинг</a>
+              </li>
+              <li class="f-link__menu" itemprop="itemListElement2" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/about">пилатес</a>
+              </li>
+              <li class="f-link__menu" itemprop="itemListElement3" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/">галерея</a>
+              </li>
+              <li itemprop="item" class="f-link__menu" itemprop="itemListElement4" itemscope
+                itemtype="http://schema.org/ListItem">
+                <a href="/contacts">контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_right">
+          <div class="dropdown">
+            <div class="dropdown__city">
+              Москва
+            </div>
+            <div class="dropdown__button select__category ordering__data-dropdown">
+              [&nbsp;Выберите город&nbsp;]
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" data-value="category1">
+                <span>Самара</span>
+              </li>
+              <li class="dropdown__list-item" data-value="category2">
+                <span>Новгород</span>
+              </li>
+              <li class="dropdown__list-item" data-value="category3">
+                <span>Тула</span>
+              </li>
+              <li class="dropdown__list-item" data-value="category4">
+                <span>Северодвинск</span>
+              </li>
+            </ul>
+            <input type="text" name="select-category" value="" class="dropdown__input-hidden" />
+          </div>
+        </div>
+      </nav>
+      <div class="title__box">
+        <h1 class="header__title inner">Календарь</h1>
+        <img src="images/title_img.png">
+      </div>
+      <div class="header__info">
+        <div class="header__info_left">KNGK SHAMARA SPORT TEAM</div>
+        <div class="header__info_right">выбирай то, что подходит именно тебе</div>
+      </div>
+    </header>
+    <main class="f-page__main">
+      <div class="tab">
+        <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-1">[&nbsp;футбол&nbsp;]</label>
+        <input id="tab-btn-2" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-2">[&nbsp;твд&nbsp;]</label>
+        <input id="tab-btn-3" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-3">[&nbsp;стретчинг&nbsp;]</label>
+        <input id="tab-btn-4" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-4">[&nbsp;пилатес&nbsp;]</label>
+        <input id="tab-btn-5" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-5">[&nbsp;велопробег&nbsp;]</label>
+        <input id="tab-btn-6" name="tab-btn" type="radio" value="">
+        <label for="tab-btn-6">[&nbsp;лыжи&nbsp;]</label>
+
+        <div class="tab-content" id="content-1">
+          <div class="list__wrap">
+            <div class="list">
+              <div class="list__item">
+                <div class="th__span item_name">[&nbsp;месяц и год&nbsp;]</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="item_square">
+                  <img src="images/plus.png" alt="plus">
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+            </div>
+            <div class="list">
+              <div class="list__item">
+                <div class="th__span item_name">[&nbsp;месяц и год&nbsp;]</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+            </div>
+            <div class="list">
+              <div class="list__item">
+                <div class="th__span item_name">[&nbsp;месяц и год&nbsp;]</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+            </div>
+            <div class="list">
+              <div class="list__item">
+                <div class="th__span item_name">[&nbsp;месяц и год&nbsp;]</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+              <div class="list__item">
+                <div class="th__span">
+                  <span class="item_date">02.10</span>
+                  <span class="item_time">12:00</span>
+                </div>
+                <div class="row__span item_name">[&nbsp;пилатес&nbsp;]</div>
+                <div class="row__span item_desc">Тренировочный зал офиса 1-й Павловский пер., д.3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="content-2">
+          [&nbsp;твд&nbsp;]
+        </div>
+        <div class="tab-content" id="content-3">
+          [&nbsp;стретчинг&nbsp;]
+        </div>
+        <div class="tab-content" id="content-4">
+          [&nbsp;пилатес&nbsp;]
+        </div>
+        <div class="tab-content" id="content-5">
+          [&nbsp;велопробег&nbsp;]
+        </div>
+        <div class="tab-content" id="content-6">
+          [&nbsp; лыжи &nbsp;]
+        </div>
+      </div>
+      <div class="form">
+        <h1 class="form__title">заявка на участие</h1>
+        <form action="#" class="f__block_info f__form">
+          <div class="submit__box">
+            <div class="form__box">
+              <div class="form__field form__field1">
+                <label for="nameField">фио</label>
+                <input id="nameField" type="text" name="name" placeholder="Джон константинович константин" required />
+              </div>
+              <div class="form__field form__field2">
+                <label for="telField">Телефон</label>
+                <input id="telField" type="tel" name="name" placeholder="номер для связи"
+                  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" />
+                <span class="form__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90</span>
+              </div>
+              <div class="form__field form__field3">
+                <label for="emailField">Рабочая почта</label>
+                <input id="emailField" type="email" name="name" placeholder="j.konstantin@i-npz.ru" />
+                <span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+              </div>
+            </div>
+            <button class="submit__button" type="submit" value="Отправить"><span>я иду</span></button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+
+</html>

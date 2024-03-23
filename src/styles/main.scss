@@ -1,0 +1,488 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeueBold.woff2") format("woff2"),
+    url("../fonts/BebasNeueBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-size: 1rem;
+$font-color: #000;
+
+$bg-color: #fff;
+$bg-second-color: #ffff30;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: $font-size;
+  color: $font-color;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "BebasNeue", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $bg-color;
+}
+.header {
+  margin: 0 auto;
+  background-color: $bg-second-color;
+  width: 100%;
+  padding: 18px 45px 0;
+}
+.title__box {
+  position: relative;
+  max-width: 838px;
+}
+.title__box img {
+  position: absolute;
+  right: -220px;
+  bottom: 0;
+}
+.header__title {
+  font-size: 240px;
+  // font-size: 11.6vw;
+  font-weight: 700;
+  margin-top: 262px;
+}
+
+.header__info {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 357px;
+}
+.header__info_left {
+  padding: 35px 0 0 0;
+  border-top: 1px solid #000;
+  width: 50%;
+  font-size: 60px;
+  font-size: 3.05vw;
+  color: #101010;
+}
+.header__info_right {
+  padding: 35px 43px 0;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  width: 50%;
+  font-size: 100px;
+  font-size: 5.1vw;
+  font-weight: 700;
+}
+
+// list
+
+.list {
+  display: flex;
+}
+.list__wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+.list__item {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 30px;
+  border: 1px solid #000;
+  row-gap: 81px;
+  color: #242426;
+  border-bottom: none;
+  width: 25%;
+}
+.list__item:nth-child(4n) {
+  border-right: none;
+  border-left: none;
+}
+.list .list__item:nth-child(1) {
+  border-right: none;
+  border-left: none;
+}
+.list .list__item:nth-child(2) {
+  border-right: none;
+}
+.list .list__item:nth-child(3) {
+  padding-bottom: 0;
+}
+.th__span {
+  display: flex;
+  justify-content: space-between;
+}
+.item_date {
+  font-weight: 700;
+  // font-size: 102px;
+  font-size: 5vw;
+}
+.item_time {
+  // font-size: 40px;
+  font-size: 2vw;
+}
+.item_name {
+  // font-size: 40px;
+  font-weight: 700;
+  color: rgba(36, 36, 38, 1);
+}
+.item_desc {
+  font-size: 20px;
+}
+.item_square {
+  cursor: pointer;
+}
+.item_square img {
+  width: 100%;
+  min-width: 154px;
+  max-width: 410px;
+}
+.row__span {
+  display: flex;
+  border-top: 1px solid #242426;
+  padding-top: 15px;
+}
+
+.f-page__main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 35px;
+}
+.inner {
+  max-width: 1830px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 34px;
+}
+.header_left {
+  display: flex;
+  align-items: center;
+}
+.header_right {
+  margin-left: 30px;
+}
+.f-menu {
+  display: flex;
+  gap: 25px;
+}
+.f-link__menu {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 32.5px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.f-link__menu:not(:last-child):after {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+}
+
+.submit__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 82, 1);
+  text-transform: uppercase;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+.f__form {
+  display: flex;
+}
+
+// validation
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+input:invalid:not(:placeholder-shown) + .form__error {
+  display: block;
+}
+
+// form
+
+.form {
+  display: inline-block;
+  padding: 39px 46px 49px 40px;
+  background: $bg-second-color;
+  margin-top: 321px;
+}
+.form__title {
+  font-size: 60px;
+  line-height: 66px;
+}
+.f__block_info {
+  display: flex;
+  gap: 16px;
+  margin-top: 96px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.form__field1 {
+  width: 51%;
+  max-width: 863px;
+}
+.form__field2 {
+  width: 27%;
+  max-width: 438px;
+  margin-left: 34px;
+}
+.form__field3 {
+  max-width: 395px;
+  margin-left: 24px;
+}
+.form__field label {
+  font-family: "BebasNeue", sans-serif;
+  text-align: left;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(16, 16, 16, 1);
+  text-transform: uppercase;
+}
+.submit__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+.form__box {
+  display: flex;
+  width: 100%;
+}
+::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 40px;
+}
+.form__error {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+  display: none;
+}
+
+.form input {
+  outline: none;
+  display: block;
+  width: 100%;
+  background: no-repeat;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  padding: 12px 0;
+  box-sizing: border-box;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 40px;
+  color: rgba(36, 36, 38, 1);
+}
+
+.form button {
+  width: 50%;
+  padding: 30px 0 22px;
+  border-radius: 2px;
+  border: 0;
+  max-width: 858px;
+  background-color: rgba(0, 0, 0, 1);
+  margin-top: 62px;
+}
+.form button span {
+  color: rgba(255, 255, 82, 1);
+  font-size: 40px;
+  line-height: 47px;
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 400;
+}
+
+// dropdown
+
+.dropdown {
+  position: relative;
+  font-size: 22px;
+  display: flex;
+  gap: 30px;
+}
+
+.dropdown__list {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 170px;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 2px 15px 0px #9a9a9a80;
+}
+
+.dropdown__list-item {
+  margin: 0;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 13px;
+  cursor: pointer;
+  color: #222;
+}
+.dropdown__list-item:hover {
+  background-color: #ededed;
+  color: #222222;
+}
+.dropdown__input-hidden {
+  position: absolute;
+  top: 53px;
+  display: none;
+}
+
+.dropdown__list-visible {
+  display: block;
+  width: 184px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.dropdown__button:focus,
+.dropdown__button-active {
+  outline: none;
+  border-radius: 3px;
+}
+
+.dropdown__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+// tabs
+
+.tab {
+  margin-top: 189px;
+  font-size: 30px;
+}
+.tab label {
+  margin-right: 45px;
+  color: rgba(128, 128, 128, 1);
+}
+
+.tab > input[type="radio"] {
+  display: none;
+}
+.tab > input[type="radio"]:checked + label {
+  color: #000;
+  font-weight: 700;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 70px;
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3,
+#tab-btn-4:checked ~ #content-4,
+#tab-btn-5:checked ~ #content-5,
+#tab-btn-6:checked ~ #content-6 {
+  display: block;
+}
+@media only screen and (max-width: 1200px){
+  .title__box img {
+    right: 0;
+    max-width: 78%;
+  }
+  .header__title {
+    font-size: 140px;
+    font-size: 20vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .item_time {
+    font-size: 4vw;
+  }
+  .item_name {
+    font-size: 4vw;
+  }
+  .item_desc {
+    font-size: 3vw;
+  }
+  .list__item {
+    padding: 5px;
+  }
+  .item_square img {
+    min-width: 44px;
+  }
+  .header__title {
+    margin-top: 62px;
+  }
+  .header__info {
+    padding-bottom: 57px;
+  }
+  .tab {
+    margin-top: 69px;
+  }
+  ::placeholder {
+    font-size: 20px;
+    font-size: 3vw;
+  }
+  .form__field label {
+    font-size: 15px;
+  }
+  .form {
+    margin-top: 100px;
+  }
+
+  .f-menu {
+    display: none;
+  }
+  .header {
+    padding: 11px 17px 25px 12px;
+    border-bottom: none;
+  }
+  .nav {
+    justify-content: flex-end;
+  }
+  .f-page__main {
+    padding: 0 10px;
+  }
+}
